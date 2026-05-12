@@ -121,7 +121,7 @@ export default function HeroSection() {
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                 <span className="text-[9px] tracking-[0.2em] font-bold text-white uppercase">
-                  Certified Professional
+                  Hi ! I&apos;m Gangul
                 </span>
               </div>
             </div>
