@@ -48,7 +48,7 @@ export default function HeroSection() {
               title="HackTheBox"
             >
               <img
-                src="/htb.webp"
+                src="/htb.png"
                 alt="HackTheBox"
                 className="w-5 h-5 object-contain brightness-0 invert-1"
               />
@@ -61,7 +61,7 @@ export default function HeroSection() {
               title="TryHackMe"
             >
               <img
-                src="/thm.webp"
+                src="/thm.png"
                 alt="TryHackMe"
                 className="w-5 h-5 object-contain brightness-0 invert-1"
               />
