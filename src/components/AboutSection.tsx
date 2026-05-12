@@ -1,5 +1,45 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
+
+interface CertCardProps {
+  title: string;
+  subtitle: string;
+  logo: string;
+  link: string;
+  className?: string;
+}
+
+function CertCard({ title, subtitle, logo, link, className = "" }: CertCardProps) {
+  return (
+    <div className={`group perspective-1000 h-48 ${className}`}>
+      <div className="relative w-full h-full transition-all duration-700 preserve-3d group-hover:rotate-y-180">
+        {/* Front */}
+        <div className="absolute inset-0 backface-hidden premium-glass p-8 rounded-3xl flex flex-col items-center justify-center text-center">
+          <span className="text-3xl font-display-xl text-primary block mb-2">
+            {title}
+          </span>
+          <span className="text-[8px] tracking-[0.3em] text-on-surface-variant uppercase font-bold">
+            {subtitle}
+          </span>
+        </div>
+        {/* Back */}
+        <div className="absolute inset-0 backface-hidden rotate-y-180 premium-glass p-6 rounded-3xl flex flex-col items-center justify-center text-center">
+          <img src={logo} alt={title} className="w-20 h-20 object-contain mb-4" />
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-primary/20 border border-primary/40 text-primary px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-primary hover:text-white transition-all"
+          >
+            View
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function AboutSection() {
   return (
     <section
@@ -14,46 +54,32 @@ export default function AboutSection() {
             <span className="text-primary flicker">Me.</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div className="premium-glass p-8 rounded-3xl group tilt-container">
-              <div className="tilt-child text-center">
-                <span className="text-3xl font-display-xl text-primary block mb-2">
-                  HTB CWES
-                </span>
-                <span className="text-[8px] tracking-[0.3em] text-on-surface-variant uppercase font-bold">
-                  Certification
-                </span>
-              </div>
-            </div>
-            <div className="premium-glass p-8 rounded-3xl group translate-y-12 tilt-container">
-              <div className="tilt-child text-center">
-                <span className="text-3xl font-display-xl text-primary block mb-2">
-                  eJPT
-                </span>
-                <span className="text-[8px] tracking-[0.3em] text-on-surface-variant uppercase font-bold">
-                  Certification
-                </span>
-              </div>
-            </div>
-            <div className="premium-glass p-8 rounded-3xl group tilt-container">
-              <div className="tilt-child text-center">
-                <span className="text-3xl font-display-xl text-primary block mb-2">
-                  CRTA
-                </span>
-                <span className="text-[8px] tracking-[0.3em] text-on-surface-variant uppercase font-bold">
-                  Certification
-                </span>
-              </div>
-            </div>
-            <div className="premium-glass p-8 rounded-3xl group translate-y-12 tilt-container">
-              <div className="tilt-child text-center">
-                <span className="text-3xl font-display-xl text-primary block mb-2">
-                  ISO 27001
-                </span>
-                <span className="text-[8px] tracking-[0.3em] text-on-surface-variant uppercase font-bold">
-                  Internal Auditor
-                </span>
-              </div>
-            </div>
+            <CertCard
+              title="HTB CWES"
+              subtitle="Certification"
+              logo="/cwes.png"
+              link="https://www.credly.com/badges/7633c9d0-9fb4-4a95-bd5d-8d01fcfef85b/public_url"
+            />
+            <CertCard
+              title="eJPT"
+              subtitle="Certification"
+              logo="/ejpt.png"
+              link="https://certs.ine.com/20c9c1b9-3f00-40ba-a4a6-c3a5776dccf5#acc.FsSW8UxV"
+              className="sm:translate-y-12"
+            />
+            <CertCard
+              title="CRTA"
+              subtitle="Certification"
+              logo="/crta.png"
+              link="https://labs.cyberwarfare.live/credential/achievement/6885b4dd91e1e7894fd4da4e"
+            />
+            <CertCard
+              title="ISO 27001"
+              subtitle="Internal Auditor"
+              logo="/leadauditor.png"
+              link="https://learn.mastermindassurance.com/certificates/nwoqe9eb83"
+              className="sm:translate-y-12"
+            />
           </div>
         </div>
         <div className="pt-24 space-y-10">
@@ -99,3 +125,4 @@ export default function AboutSection() {
     </section>
   );
 }
+
