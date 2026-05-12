@@ -21,9 +21,12 @@ export default function Navbar() {
       id="navbar"
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-[80px] flex justify-between items-center">
-        <div className="font-display-xl text-xl font-bold tracking-tighter text-white flicker">
+        <a
+          href="#hero"
+          className="font-display-xl text-xl font-bold tracking-tighter text-white flicker cursor-pointer"
+        >
           GANGUL WEERASINGHE
-        </div>
+        </a>
         <div className="hidden md:flex gap-12 items-center">
           <a
             className="text-on-surface-variant font-medium text-xs tracking-[0.2em] uppercase hover:text-primary transition-all"
