@@ -68,6 +68,21 @@ export default function ContactSection() {
                   0718853420
                 </div>
               </div>
+              <div className="flex items-center gap-6 group">
+                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 group-hover:bg-primary group-hover:border-primary transition-all">
+                  <span className="material-symbols-outlined text-primary group-hover:text-white">
+                    local_cafe
+                  </span>
+                </div>
+                <a
+                  href="https://buymeacoffee.com/gangulswr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-mono text-lg text-on-surface hover:text-primary transition-colors"
+                >
+                  Buy me a coffee
+                </a>
+              </div>
             </div>
           </div>
           <form
