@@ -264,3 +264,8 @@ body {
 .group:hover .group-hover\:rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/* Cert Card Flip Trigger */
+.group:hover .cert-flip {
+  transform: rotateY(180deg);
+}

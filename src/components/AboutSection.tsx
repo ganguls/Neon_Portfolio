@@ -6,32 +6,58 @@ interface CertCardProps {
   title: string;
   subtitle: string;
   link: string;
-  className?: string;
+  stagger?: boolean;
 }
 
-function CertCard({ title, subtitle, link, className = "" }: CertCardProps) {
+function CertCard({ title, subtitle, link, stagger = false }: CertCardProps) {
   return (
-    <div className={`group perspective-1000 h-48 ${className}`}>
-      <div className="relative w-full h-full transition-all duration-700 preserve-3d group-hover:rotate-y-180">
-        {/* Front */}
-        <div className="absolute inset-0 backface-hidden premium-glass p-8 rounded-3xl flex flex-col items-center justify-center text-center">
-          <span className="text-3xl font-display-xl text-primary block mb-2">
-            {title}
-          </span>
-          <span className="text-[8px] tracking-[0.3em] text-on-surface-variant uppercase font-bold">
-            {subtitle}
-          </span>
-        </div>
-        {/* Back */}
-        <div className="absolute inset-0 backface-hidden rotate-y-180 premium-glass p-6 rounded-3xl flex flex-col items-center justify-center text-center">
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-primary/20 border border-primary/40 text-primary px-8 py-3 rounded-full text-[12px] font-bold uppercase tracking-[0.3em] hover:bg-primary hover:text-white transition-all shadow-[0_0_20px_rgba(216,185,255,0.1)] hover:shadow-[0_0_30px_rgba(216,185,255,0.3)]"
+    <div className={stagger ? "sm:translate-y-12" : ""}>
+      <div className="group" style={{ perspective: "1000px", height: "12rem" }}>
+        <div
+          className="relative w-full h-full transition-[transform] duration-700 cert-flip"
+          style={{ transformStyle: "preserve-3d" }}
+        >
+          {/* Front face */}
+          <div
+            className="absolute inset-0 rounded-3xl flex flex-col items-center justify-center text-center p-8"
+            style={{
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              background: "rgba(22, 17, 28, 0.6)",
+              backdropFilter: "blur(20px) saturate(180%)",
+              border: "1px solid rgba(255, 255, 255, 0.08)",
+              boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.8)",
+            }}
           >
-            View
-          </a>
+            <span className="text-3xl font-display-xl text-primary block mb-2">
+              {title}
+            </span>
+            <span className="text-[8px] tracking-[0.3em] text-on-surface-variant uppercase font-bold">
+              {subtitle}
+            </span>
+          </div>
+          {/* Back face */}
+          <div
+            className="absolute inset-0 rounded-3xl flex flex-col items-center justify-center text-center p-6"
+            style={{
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              transform: "rotateY(180deg)",
+              background: "rgba(22, 17, 28, 0.85)",
+              backdropFilter: "blur(20px) saturate(180%)",
+              border: "1px solid rgba(216, 185, 255, 0.15)",
+              boxShadow: "0 8px 32px 0 rgba(0, 0, 0, 0.8)",
+            }}
+          >
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary/20 border border-primary/40 text-primary px-8 py-3 rounded-full text-[12px] font-bold uppercase tracking-[0.3em] hover:bg-primary hover:text-white transition-all"
+            >
+              View
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -61,7 +87,7 @@ export default function AboutSection() {
               title="eJPT"
               subtitle="Certification"
               link="https://certs.ine.com/20c9c1b9-3f00-40ba-a4a6-c3a5776dccf5#acc.FsSW8UxV"
-              className="sm:translate-y-12"
+              stagger
             />
             <CertCard
               title="CRTA"
@@ -72,7 +98,7 @@ export default function AboutSection() {
               title="ISO 27001"
               subtitle="Internal Auditor"
               link="https://learn.mastermindassurance.com/certificates/nwoqe9eb83"
-              className="sm:translate-y-12"
+              stagger
             />
           </div>
         </div>
