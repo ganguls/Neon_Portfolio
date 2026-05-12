@@ -43,16 +43,6 @@ export default function ContactSection() {
                   0718853420
                 </div>
               </div>
-              <div className="flex items-center gap-6 group">
-                <div className="w-14 h-14 bg-white/5 rounded-2xl flex items-center justify-center border border-white/10 group-hover:bg-primary group-hover:border-primary transition-all">
-                  <span className="material-symbols-outlined text-primary group-hover:text-white">
-                    encrypted
-                  </span>
-                </div>
-                <div className="font-mono text-lg text-on-surface">
-                  PGP: 0x4F3E...B210
-                </div>
-              </div>
             </div>
           </div>
           <form className="space-y-8 p-12 bg-white/5 rounded-[3rem] border border-white/5 backdrop-blur-md">
