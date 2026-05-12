@@ -50,7 +50,7 @@ export default function HeroSection() {
               <img
                 src="/htb.png"
                 alt="HackTheBox"
-                className="w-5 h-5 object-contain brightness-0 invert-1"
+                className="w-5 h-5 object-contain"
               />
             </a>
             <a
@@ -63,7 +63,7 @@ export default function HeroSection() {
               <img
                 src="/thm.png"
                 alt="TryHackMe"
-                className="w-5 h-5 object-contain brightness-0 invert-1"
+                className="w-5 h-5 object-contain"
               />
             </a>
             <a
