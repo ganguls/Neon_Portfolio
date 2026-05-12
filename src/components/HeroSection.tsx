@@ -34,7 +34,7 @@ export default function HeroSection() {
           <div className="flex gap-4 mb-10 stagger-hero">
             <a
               className="social-icon"
-              href="https://github.com/gangul-weerasinghe"
+              href="https://github.com/ganguls"
               target="_blank"
               rel="noopener noreferrer"
               title="GitHub"
@@ -45,25 +45,25 @@ export default function HeroSection() {
             </a>
             <a
               className="social-icon"
-              href="https://app.hackthebox.com/users/777324"
+              href="https://profile.hackthebox.com/profile/019dc34d-9a68-72de-93fa-0a2d1c260e6d"
               target="_blank"
               rel="noopener noreferrer"
               title="HackTheBox"
             >
-              <span className="material-symbols-outlined text-xl">terminal</span>
+              <img src="/htb.webp" alt="HackTheBox" className="w-5 h-5 object-contain" />
             </a>
             <a
               className="social-icon"
-              href="https://tryhackme.com/p/G4NGUL"
+              href="https://tryhackme.com/p/gangulsw"
               target="_blank"
               rel="noopener noreferrer"
               title="TryHackMe"
             >
-              <span className="material-symbols-outlined text-xl">security</span>
+              <img src="/thm.webp" alt="TryHackMe" className="w-5 h-5 object-contain" />
             </a>
             <a
               className="social-icon"
-              href="https://www.linkedin.com/in/gangulweerasinghe/"
+              href="https://www.linkedin.com/in/ganguls/"
               target="_blank"
               rel="noopener noreferrer"
               title="LinkedIn"
