@@ -21,10 +21,7 @@ export default function HeroSection() {
             id="hero-title"
           >
             <span className="block overflow-hidden">
-              <span className="reveal-text inline-block">Offensive Cyber</span>
-            </span>
-            <span className="block overflow-hidden">
-              <span className="reveal-text inline-block">Security Specialist</span>
+              <span className="reveal-text inline-block">Offensive Security Specialist</span>
             </span>
           </h1>
           <div className="font-display-xl text-2xl text-primary/90 mb-8 stagger-hero font-medium">
