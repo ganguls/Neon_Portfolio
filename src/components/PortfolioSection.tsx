@@ -94,13 +94,7 @@ const softwareProjects: Project[] = [
       "Developed a GenAI-powered platform for interactive PDF reading. Integrated Gemini AI for real-time English-to-Sinhala translation and advanced vocabulary extraction, featuring a searchable dashboard and persistent storage via MongoDB.",
     link: "https://github.com/ganguls/VocabPDF",
   },
-  {
-    tech: "MongoDB, Express, React, Node.js, Firebase",
-    title: "Secure Full-Stack MERN Architecture",
-    description:
-      "Developed a secure MERN-stack platform aligned with OWASP Top 10 standards. Implemented Firebase OAuth 2.0, RBAC controls, and strict schema-based validation to mitigate common web vulnerabilities.",
-    link: "#",
-  },
+
 ];
 
 function ProjectCard({ project }: { project: Project }) {
