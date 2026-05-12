@@ -1,6 +1,31 @@
 "use client";
 
+import { useState } from "react";
+
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+    const subject = encodeURIComponent(`Contact from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    );
+    window.location.href = `mailto:gangulsw@gmail.com?subject=${subject}&body=${body}`;
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <section
       className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-6 md:px-[80px] mb-24"
@@ -45,12 +70,19 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          <form className="space-y-8 p-12 bg-white/5 rounded-[3rem] border border-white/5 backdrop-blur-md">
+          <form
+            onSubmit={handleSubmit}
+            className="space-y-8 p-12 bg-white/5 rounded-[3rem] border border-white/5 backdrop-blur-md"
+          >
             <div className="space-y-2">
               <label className="text-[10px] tracking-[0.3em] uppercase font-bold text-white/50">
                 Name / Organization
               </label>
               <input
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
                 className="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 rounded-2xl px-8 py-5 text-white outline-none transition-all placeholder:text-white/20"
                 placeholder="Your Name"
                 type="text"
@@ -61,6 +93,10 @@ export default function ContactSection() {
                 Email Address
               </label>
               <input
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
                 className="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 rounded-2xl px-8 py-5 text-white outline-none transition-all placeholder:text-white/20"
                 placeholder="email@provider.com"
                 type="email"
@@ -71,6 +107,10 @@ export default function ContactSection() {
                 Message
               </label>
               <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
                 className="w-full bg-white/5 border border-white/10 focus:border-primary focus:ring-0 rounded-2xl px-8 py-5 text-white outline-none transition-all placeholder:text-white/20"
                 placeholder="How can we work together?"
                 rows={4}
@@ -79,7 +119,6 @@ export default function ContactSection() {
             <button
               className="w-full bg-primary text-white py-6 rounded-2xl font-bold uppercase tracking-[0.4em] text-xs hover:shadow-[0_0_50px_rgba(216,185,255,0.4)] transition-all flex justify-center items-center gap-4"
               type="submit"
-              onClick={(e) => e.preventDefault()}
             >
               Send Message{" "}
               <span className="material-symbols-outlined text-lg">send</span>
@@ -90,3 +129,4 @@ export default function ContactSection() {
     </section>
   );
 }
+
