@@ -3,7 +3,7 @@
 export default function AboutSection() {
   return (
     <section
-      className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-[80px]"
+      className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-6 md:px-[80px]"
       id="about"
     >
       <div className="grid md:grid-cols-2 gap-24 items-start">
@@ -13,7 +13,7 @@ export default function AboutSection() {
             <br />
             <span className="text-primary flicker">Me.</span>
           </h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="premium-glass p-8 rounded-3xl group tilt-container">
               <div className="tilt-child text-center">
                 <span className="text-3xl font-display-xl text-primary block mb-2">

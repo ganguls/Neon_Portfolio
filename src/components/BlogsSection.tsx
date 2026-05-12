@@ -20,14 +20,14 @@ const blogs = [
 export default function BlogsSection() {
   return (
     <section
-      className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-[80px]"
+      className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-6 md:px-[80px]"
       id="blogs"
     >
       <div className="mb-24">
         <span className="text-primary text-[10px] tracking-[0.4em] uppercase font-bold mb-4 block">
           Insights
         </span>
-        <h2 className="font-display-xl text-6xl font-bold text-white tracking-tighter">
+        <h2 className="font-display-xl text-4xl md:text-6xl font-bold text-white tracking-tighter">
           Blogs
         </h2>
       </div>

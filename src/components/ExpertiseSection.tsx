@@ -57,12 +57,12 @@ export default function ExpertiseSection() {
       className="reveal-3d py-stack-xl relative overflow-hidden"
       id="intelligence"
     >
-      <div className="max-w-[1280px] mx-auto px-[80px]">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-[80px]">
         <div className="text-center mb-24">
           <span className="text-primary text-[10px] tracking-[0.5em] uppercase font-bold mb-4 block">
             Areas of Focus
           </span>
-          <h2 className="font-display-xl text-6xl font-bold text-white tracking-tighter">
+          <h2 className="font-display-xl text-4xl md:text-6xl font-bold text-white tracking-tighter">
             Expertise
           </h2>
         </div>

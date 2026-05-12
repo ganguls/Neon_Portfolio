@@ -83,7 +83,7 @@ function ProjectCard({ project }: { project: Project }) {
 export default function PortfolioSection() {
   return (
     <section
-      className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-[80px]"
+      className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-6 md:px-[80px]"
       id="portfolio"
     >
       <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
@@ -91,7 +91,7 @@ export default function PortfolioSection() {
           <div className="text-primary text-[10px] tracking-[0.4em] uppercase font-bold mb-4">
             Portfolio
           </div>
-          <h2 className="font-display-xl text-6xl font-bold text-white tracking-tighter">
+          <h2 className="font-display-xl text-4xl md:text-6xl font-bold text-white tracking-tighter">
             Technical Projects
           </h2>
         </div>

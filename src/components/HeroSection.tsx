@@ -5,7 +5,7 @@
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center pt-20" id="hero">
-      <div className="max-w-[1280px] mx-auto px-[80px] w-full grid md:grid-cols-12 gap-10 items-center">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-[80px] w-full grid md:grid-cols-12 gap-10 items-center">
         <div className="md:col-span-8 relative z-20">
           <div className="inline-flex items-center gap-4 mb-8 stagger-hero">
             <div className="flex gap-1">

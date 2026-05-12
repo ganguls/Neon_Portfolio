@@ -3,17 +3,17 @@
 export default function ContactSection() {
   return (
     <section
-      className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-[80px] mb-24"
+      className="reveal-3d py-stack-xl max-w-[1280px] mx-auto px-6 md:px-[80px] mb-24"
       id="contact"
     >
-      <div className="premium-glass carbon-texture p-12 md:p-24 rounded-[4rem] relative overflow-hidden">
+      <div className="premium-glass carbon-texture p-6 sm:p-12 md:p-24 rounded-[3rem] md:rounded-[4rem] relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2" />
         <div className="grid md:grid-cols-2 gap-24 relative z-10">
           <div>
             <span className="text-primary text-[10px] tracking-[0.5em] uppercase font-bold mb-6 block">
               Get in Touch
             </span>
-            <h2 className="font-display-xl text-6xl font-bold text-white mb-10 tracking-tighter leading-none flicker">
+            <h2 className="font-display-xl text-4xl md:text-6xl font-bold text-white mb-10 tracking-tighter leading-none flicker">
               Contact
               <br />
               Me

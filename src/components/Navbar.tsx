@@ -20,7 +20,7 @@ export default function Navbar() {
       }`}
       id="navbar"
     >
-      <div className="max-w-[1280px] mx-auto px-[80px] flex justify-between items-center">
+      <div className="max-w-[1280px] mx-auto px-6 md:px-[80px] flex justify-between items-center">
         <div className="font-display-xl text-xl font-bold tracking-tighter text-white flicker">
           GANGUL WEERASINGHE
         </div>
