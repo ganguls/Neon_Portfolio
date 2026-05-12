@@ -50,7 +50,11 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               title="HackTheBox"
             >
-              <img src="/htb.webp" alt="HackTheBox" className="w-5 h-5 object-contain" />
+              <img
+                src="/htb.webp"
+                alt="HackTheBox"
+                className="w-5 h-5 object-contain brightness-0 invert-1"
+              />
             </a>
             <a
               className="social-icon"
@@ -59,7 +63,11 @@ export default function HeroSection() {
               rel="noopener noreferrer"
               title="TryHackMe"
             >
-              <img src="/thm.webp" alt="TryHackMe" className="w-5 h-5 object-contain" />
+              <img
+                src="/thm.webp"
+                alt="TryHackMe"
+                className="w-5 h-5 object-contain brightness-0 invert-1"
+              />
             </a>
             <a
               className="social-icon"
