@@ -9,63 +9,115 @@ interface Project {
 
 const offensiveProjects: Project[] = [
   {
-    tech: "Python, Forensic-Tools",
-    title: "Forensic-Artifact-Analysis",
+    tech: "Python, LDAP, Active Directory",
+    title: "CertPyre: AD CS Auditing Framework",
     description:
-      "A repository focused on extracting and analyzing various forensic artifacts from systems.",
-    link: "https://github.com/gangul-weerasinghe/Forensic-Artifact-Analysis",
+      "Developed a modular security auditing tool designed to identify misconfigurations in Active Directory Certificate Services (AD CS). Currently supports automated enumeration and detection of ESC1 vulnerabilities (Enrollee Supplies Subject), facilitating advanced privilege escalation assessments in enterprise environments.",
+    link: "https://github.com/ganguls/CertPyre",
   },
   {
-    tech: "Bash, Security",
-    title: "AD-Lab-Deployment",
+    tech: "Python, ADB, SQLite",
+    title: "DroidSnoop: Mobile Forensic Analysis Tool",
     description:
-      "Scripts and documentation for automating the deployment of Active Directory security labs.",
-    link: "https://github.com/gangul-weerasinghe/AD-Lab-Deployment",
+      "Engineered a mobile forensics tool for automated security analysis of Android applications. Features automated extraction of local data storage, scanning for hardcoded secrets in Shared Preferences, SQLite database dumping for sensitive keywords, and Firebase misconfiguration checks to identify publicly accessible cloud endpoints.",
+    link: "https://github.com/ganguls/Droidsnoop",
+  },
+  {
+    tech: "C++, Python, Arduino, Serial Comm",
+    title: "Hardware Security Attack Simulation Lab",
+    description:
+      "Developed a controlled hardware simulation environment to demonstrate physical layer vulnerabilities, specifically focusing on Man-in-the-Middle (MITM) and Side-Channel attacks. Implemented a Side-Channel simulation capable of leaking secrets via timing and optical channels and built a custom Python CLI dashboard for live monitoring.",
+    link: "https://github.com/ganguls/Arduino-Based-Hardware-Security-Attack-Simulation-Lab",
   },
 ];
 
 const cloudProjects: Project[] = [
   {
-    tech: "Ansible, AWS, Docker",
-    title: "Cybersecurity-Lab-Cloud",
+    tech: "AWS, Python, React",
+    title: "CloudSentinel: Enterprise Serverless API Security",
     description:
-      "Automated deployment of security testing labs in cloud environments using Infrastructure as Code.",
-    link: "https://github.com/gangul-weerasinghe/Cybersecurity-Lab-Cloud",
+      "Designed a production-grade serverless security framework providing defense-in-depth for cloud-native APIs. Implemented JWT-based IAM, adaptive rate limiting, and a custom threat detection engine (WAF logic) to inspect payloads for SQLi and XSS, paired with a React-based security telemetry dashboard.",
+    link: "https://github.com/ganguls/CloudSentinel-Serverless-Security",
   },
   {
-    tech: "Python, ELK, Snort",
-    title: "Threat-Detection-Dashboard",
+    tech: "Python, Flask, psutil, Heuristics",
+    title: "Anti-Keylogger Defense System",
     description:
-      "A real-time dashboard for monitoring and visualizing security threats and network intrusions.",
-    link: "https://github.com/gangul-weerasinghe/Threat-Detection-Dashboard",
+      "Built a Windows-based endpoint security tool that utilizes behavioral heuristics and process monitoring to detect and block keylogging activity. Features a glassmorphism-style web dashboard for real-time threat management, risk categorization, and administrative process termination.",
+    link: "https://github.com/ganguls/Anti-Keylogger-Defense-System",
   },
 ];
 
 const aiProjects: Project[] = [
   {
-    tech: "Python, TensorFlow",
-    title: "AI-Malware-Detector",
+    tech: "K8s, Docker, Python, Flower, OpenSSL",
+    title: "Federated Learning Defense Framework",
     description:
-      "Machine learning models trained to identify malicious patterns in binaries and script files.",
-    link: "https://github.com/gangul-weerasinghe/AI-Malware-Detector",
+      "Developed a production-grade federated learning platform with integrated defenses against Sybil, poisoning, and inference attacks. Implemented a custom PKI-based certificate authority for secure client authentication and deployed microservices using Kubernetes with real-time monitoring through Prometheus and Grafana.",
+    link: "https://github.com/ganguls/Federated-Learning-for-Secure-Finance-System",
+  },
+  {
+    tech: "TensorFlow, Keras, ResNet, Flask",
+    title: "Deep Learning Malware Classification",
+    description:
+      "Built a ResNet-based deep learning model capable of classifying 25 malware families with 95.7% accuracy using image-based malware analysis on the MalIMG dataset. Developed a RESTful API for automated static analysis and real-time malware assessment of uploaded binaries.",
+    link: "https://github.com/ganguls/Malware-Classification-Using-DL",
+  },
+  {
+    tech: "Python, Random Forest, Scikit-learn",
+    title: "Network Anomaly Detection System",
+    description:
+      "Implemented a high-performance network security monitor using Machine Learning to classify traffic into 'Normal' or various attack vectors (DoS, Probe, R2L, U2R). Achieved ~99.5% accuracy through rigorous feature engineering and multi-class classification on the NSL-KDD dataset.",
+    link: "https://github.com/ganguls/Network-Anomaly-Detection-Using-ML",
+  },
+  {
+    tech: "Python, Naive Bayes, N-grams",
+    title: "Spam Classifier Using ML",
+    description:
+      "Developed an SMS spam classification system utilizing Multinomial Naive Bayes and N-gram feature extraction. Optimized model performance using GridSearchCV for hyperparameter tuning and implemented a full text-preprocessing pipeline (tokenization, stemming, and stop-word removal).",
+    link: "https://github.com/ganguls/Spamclassifier-Using-ML",
+  },
+];
+
+const softwareProjects: Project[] = [
+  {
+    tech: "Django, PostgreSQL, GitHub Actions, CodeQL",
+    title: "DevSecOps E-Commerce Platform",
+    description:
+      "Designed a secure full-stack e-commerce platform with automated CI/CD pipelines. Integrated CodeQL SAST scanning and Dependabot for supply-chain security, ensuring a robust defensive posture from development through deployment.",
+    link: "https://github.com/ganguls/django-Pizza-Shop",
+  },
+  {
+    tech: "React, Node.js, Express, MongoDB, Gemini AI",
+    title: "Vocabulary PDF Reader (GenAI)",
+    description:
+      "Developed a GenAI-powered platform for interactive PDF reading. Integrated Gemini AI for real-time English-to-Sinhala translation and advanced vocabulary extraction, featuring a searchable dashboard and persistent storage via MongoDB.",
+    link: "https://github.com/ganguls/VocabPDF",
+  },
+  {
+    tech: "MongoDB, Express, React, Node.js, Firebase",
+    title: "Secure Full-Stack MERN Architecture",
+    description:
+      "Developed a secure MERN-stack platform aligned with OWASP Top 10 standards. Implemented Firebase OAuth 2.0, RBAC controls, and strict schema-based validation to mitigate common web vulnerabilities.",
+    link: "#",
   },
 ];
 
 function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="premium-glass group rounded-[2.5rem] tilt-container p-2">
-      <div className="p-8 tilt-child">
+      <div className="p-8 tilt-child h-full flex flex-col">
         <span className="text-primary/50 text-[10px] font-mono block mb-2">
           {project.tech}
         </span>
         <h4 className="font-display-xl text-2xl mb-4 text-white group-hover:text-primary transition-colors">
           {project.title}
         </h4>
-        <p className="text-on-surface-variant text-sm mb-6 leading-relaxed opacity-70">
+        <p className="text-on-surface-variant text-sm mb-6 leading-relaxed opacity-70 flex-grow">
           {project.description}
         </p>
         <a
-          className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50 group-hover:text-white transition-all"
+          className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.3em] text-white/50 group-hover:text-white transition-all mt-auto"
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
@@ -128,6 +180,18 @@ export default function PortfolioSection() {
         </h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {aiProjects.map((project) => (
+            <ProjectCard key={project.title} project={project} />
+          ))}
+        </div>
+      </div>
+
+      {/* Software Engineering & Tools */}
+      <div className="mb-16">
+        <h3 className="text-primary text-[12px] tracking-[0.5em] uppercase font-bold mb-10 border-l-4 border-primary pl-4">
+          Software Engineering &amp; Tools
+        </h3>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {softwareProjects.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
